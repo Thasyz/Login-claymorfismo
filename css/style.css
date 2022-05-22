@@ -19,7 +19,24 @@ display: flex;
 justify-content:center;
 align-items: center;
 min-height: 100vh;
-background: var(--bs-p6);
+background: linear-gradient(45deg, #671970, #9e17ad, rgb(51, 21, 54) );
+    background-size: 400% 400%;
+    animation-name: background;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes background {
+  0%{
+      background-position-x: 0% ;
+  }
+   50%{
+    background-position-x: 50%;
+  }
+  100%{
+      background-position-x: 100%;
+  }
 }
 
 form{
@@ -33,7 +50,7 @@ min-height: 500px;
 display: flex;
 justify-content: center;
 align-items: center;
-background: var(--bs-p3);
+background: var(--bs-p6);
 box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
 10px 10px 70px rgba(0, 0, 0, 0.25), 
 inset 5px 5px 10px rgba(0, 0, 0, 0.5),
@@ -80,7 +97,7 @@ margin-bottom: 20px;
   position: relative;
 min-width: 40px;
 height: 40px;
-background: var(--bs-p4);
+background: var(--bs-p2);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -121,7 +138,8 @@ margin-top: 10px;
 }
 .inputBox .box input[type="submit"]:hover
 {
-filter: brightness(1.1)
+  background-color: rgb(220, 76, 249);
+  transition: 0.5s;
 }
 label{
   color: #fff;
@@ -140,4 +158,18 @@ label input{
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85em;
+  justify-content: space-between;
+
 }
+.help{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+}
+
